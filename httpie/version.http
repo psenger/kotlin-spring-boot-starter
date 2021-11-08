@@ -1,0 +1,3 @@
+### GET version with a header
+GET http://localhost:8080/version
+Accept: application/json
