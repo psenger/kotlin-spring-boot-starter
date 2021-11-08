@@ -16,8 +16,8 @@ class VersionController( @Autowired val gitConfig: GitConfig ) {
     @GetMapping(value = ["/version"], produces = [MediaType.APPLICATION_JSON_VALUE])
     fun helloWorld(): ResponseEntity<Any?> {
         return ResponseEntity.ok(ObjectMapper().writeValueAsString(VersionModel(
-            gitCommitId = gitConfig.commitId,
-            gitNow = System.currentTimeMillis().toString(),
+            commitId = gitConfig.commitId,
+            now = System.currentTimeMillis().toString(),
         )))
     }
 }
