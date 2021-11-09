@@ -32,8 +32,13 @@ repositories {
 
 dependencies {
     def springBootVersion = '2.5.5'
+    def springFoxVersion = '2.9.2'
     implementation 'org.springframework.boot:spring-boot-starter-actuator:' +  springBootVersion
     implementation 'org.springframework.boot:spring-boot-starter-web:' +  springBootVersion
+    implementation 'io.springfox:springfox-spring-web:' + springFoxVersion
+    implementation 'io.springfox:springfox-schema:'+ springFoxVersion
+    implementation 'io.springfox:springfox-core:'+ springFoxVersion
+    implementation 'io.springfox:springfox-swagger2:'+ springFoxVersion
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
